@@ -24,6 +24,8 @@ module.exports = async function () {
         web3 = await timelock.useKovanProvider(Timelock);
     } else if (argv['network'] === 'mainnet') {
         web3 = await timelock.useMainnetProvider(Timelock);
+    } else if (argv['network'] === 'polygon') {
+        web3 = await timelock.usePolygonProvider(Timelock);
     }
 
     let type = argv['type'];

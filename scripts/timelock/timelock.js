@@ -14,6 +14,12 @@ async function useMainnetProvider(timelockContract) {
     return providers.useMainnetProvider();
 }
 
+async function usePolygonProvider(timelockContract) {
+    this.timelock = await timelockContract.at(contracts.polygon.timeLock);
+    this.sender = timelock_config.admin.polygon;
+    return providers.usePolygonProvider();
+}
+
 async function getQueueContextByAction(web3, method, action) {
     console.log('eta:', action.eta.toString());
     let params = await method.generateParams(action.params);
@@ -82,5 +88,6 @@ module.exports = {
     sendCancelTimeLock: sendCancelTimeLock,
 
     useKovanProvider: useKovanProvider,
-    useMainnetProvider: useMainnetProvider
+    useMainnetProvider: useMainnetProvider,
+    usePolygonProvider: usePolygonProvider,
 }

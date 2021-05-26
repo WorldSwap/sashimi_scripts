@@ -31,7 +31,16 @@ module.exports = {
             network_id: 1,
             gas: 200000,
             gasPrice : 160000000000, //160 GWei
-        }
+        },
+
+        polygon: {
+            provider: () => new HDWalletProvider(keys.privateKeys, providers.polygon, 0, keys.privateKeys.length),
+            network_id: 137,
+            confirmations: 2,
+            timeoutBlocks: 20000,
+            skipDryRun: false,
+            chainId: 137
+          }
     },
     mocha: {
         enableTimeouts: false

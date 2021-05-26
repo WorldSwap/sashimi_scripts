@@ -11,8 +11,9 @@ module.exports = {
     },
 
     admin: {
-        kovan: keys.address.alice,
-        mainnet: keys.address.bob
+        // kovan: keys.address.alice,
+        // mainnet: keys.address.bob,
+        polygon: keys.address.dev,
     },
 
 };

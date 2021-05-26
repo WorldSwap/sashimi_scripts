@@ -11,9 +11,16 @@ function useMainnetProvider() {
     return new Web3(info.mainnet);
 }
 
+function usePolygonProvider() {
+    console.log('using polygon provider..');
+    return new Web3(info.polygon);
+}
+
 module.exports ={
     mainnet : info.mainnet,
     kovan : info.kovan,
+    polygon : info.polygon,
     useKovanProvider : useKovanProvider,
-    useMainnetProvider : useMainnetProvider
+    useMainnetProvider : useMainnetProvider,
+    usePolygonProvider : usePolygonProvider
 }

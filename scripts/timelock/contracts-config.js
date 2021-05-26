@@ -13,5 +13,9 @@ module.exports = {
         chef: info.contracts.mainnet.chef,
         factory: info.contracts.mainnet.factory,
         investment: info.contracts.mainnet.investment,
+    },
+
+    polygon: {
+        timeLock: info.contracts.mainnet.timeLock,
     }
 }

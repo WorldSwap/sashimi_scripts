@@ -4,6 +4,4 @@
 /.idea
 /data/*.json
 
-package-lock.json
-yarn.lock
 info.json
